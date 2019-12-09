@@ -1,0 +1,3 @@
+Lijst->buttons
+
+onclick->conformatie

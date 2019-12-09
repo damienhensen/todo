@@ -1,0 +1,16 @@
+Inloggen als begeleider, 
+Patient kiezen.
+
+2x input
+remember
+ww vergeten
+
+
+input: {
+
+fout,
+onclick,
+placeholder,
+label
+
+}

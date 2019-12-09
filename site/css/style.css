@@ -1,0 +1,81 @@
+body {
+    background-color: #689F39;
+    color: #FFFFFF;
+}
+
+.logo {
+    width: 104px;
+    height: 188px;
+    margin: 35.5px auto;
+}
+
+main form {
+    width: 200px;
+    margin: 0 auto;
+}
+
+main form input:not([type=checkbox]) {
+    width: 100%;
+    color: #FFFFFF;
+}
+
+main form input[type=email],
+main form input[type=password] {
+    padding-left: 33px;
+    width: calc(100% - 35px);
+    border: none;
+    border-bottom: 1px solid black;
+    background-color: transparent;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: 25px 22px;
+    font-size: 23px;
+}
+
+main form input::placeholder,
+main form input::-webkit-input-placeholder,
+main form input::-ms-input-placeholder {
+    opacity: 1;
+    color: rgba(255,255,255,1);
+}
+
+
+
+main form input[type=email] {
+    margin-top: 33px;
+    background-image: url('../images/email.svg');
+}
+
+main form input[type=password] {
+    margin-top: 49px;
+    background-image: url('../images/password.svg');
+}
+
+main form label,
+main form input[type=checkbox] {
+    margin-top: 43px;
+    font-size: 15px;
+}
+
+main form input[type=submit] {
+    margin-top: 50px;
+    width: 179px;
+    height: 46px;
+    border-radius: 23px;
+    border: 1px solid #707070;
+    background-color: #05386B;
+    font-size: 20px;
+}
+
+main div {
+    position: absolute;
+    left: 111px;
+    margin: 0 auto;
+    margin-top: 29px;
+}
+
+main div a {
+    font-size: 15px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
