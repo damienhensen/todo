@@ -1,0 +1,50 @@
+.modal__background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 1000;
+}
+
+.modal {
+    width: 288px;
+    height: 217px;
+    background: #379683 0% 0% no-repeat padding-box;
+    border: 1px solid #689F39;
+    border-radius: 23px;
+    opacity: 1;
+    margin: 242px auto;
+}
+
+.modal h3 {
+    text-align: left;
+    font-family: 'Segoe UI Regular';
+    font-size: 20px;
+    font-weight: normal;
+    text-align: center;
+    letter-spacing: 0;
+    color: #FFFFFF;
+    opacity: 1;
+    margin-top: 18px;
+}
+
+.modal__close--button {
+    display: none;
+}
+
+.modalContent {
+    display: grid;
+}
+
+.modalContent button {
+    width: 179px;
+    height: 46px;
+    border-radius: 23px;
+    margin: 0 auto;
+}
+
+.modalContent button:first-of-type {
+    margin: 20px auto 20px;
+}
