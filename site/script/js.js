@@ -1,3 +1,5 @@
+var correctEmail = 'login@this.com';
+var correctPassword = 'password';
 var email = document.getElementById('email');
 var password = document.getElementById('wachtwoord');
 var remember = document.getElementById('remember');
@@ -30,18 +32,38 @@ function login() {
         errorDiv.append('E-mail niet ingevuld');
         errorDiv.appendChild(linebreak);
         error = true;
+        errorDiv.style.left = '100px';
+
     } else {
         console.log("E-mail is niet leeg");
         console.log(email.value);
+    }
+
+    if (!email.value.includes('@') && !email.value == '') {
+        console.log("E-mail niet goed ingevuld");
+        errorDiv.append('E-mail niet goed ingevuld');
+        errorDiv.appendChild(linebreak);
+        error = true;
+        errorDiv.style.left = '80px';
     }
 
     if (password.value == '') {
         console.log("Password is leeg");
         errorDiv.append('Wachtwoord niet ingevuld');
         error = true;
+        errorDiv.style.left = '80px';
     } else {
         console.log("Password is niet leeg");
         console.log(password.value);
+    }
+
+    if (email.value == correctEmail && password.value == correctPassword) {
+        errorDiv.style.left = '80px';
+    } else if (email.value != correctEmail && password.value != correctPassword && error == false) {
+        console.log('Verkeerde codes');
+        errorDiv.style.left = '40px';
+        errorDiv.append('E-mail of wachtwoord is niet correct');
+        error = true;
     }
 
     if (remember.checked) {
