@@ -30,6 +30,10 @@
     src: local('Segoe UI Bold Italic'), url('../font/Segoe UI Bold Italic.woff') format('woff');
 }
 
+html {
+    overflow-x: hidden;
+}
+
 body {
     background-color: #689F39;
     color: #FFFFFF;
@@ -173,20 +177,34 @@ h1 {
     z-index: 100;
 }
 
+#menu {
+    display: none;
+}
+
 .menu--hamburger {
     width: 30px;
     height: 25px;
     margin: 36px 11px;
 }
 
-#menu {
-    display: none;
+.menu-items {
+    position: relative;
+    left: 12px;
+}
+
+.menu-items a {
+    position: absolute;
+    left: 1000px;
+    font-size: 25px;
+    font: Segoe UI Bold;
+    color: #FFFFFF;
+    text-decoration: none;
 }
 
 .patient {
     margin: 29px auto;
     width: 288px;
-    height: 191px;
+    min-height: 191px;
     background: #379683 0% 0% no-repeat padding-box;
     border: 1px solid #05CB95;
     display: grid;
@@ -200,7 +218,6 @@ h1 {
 
 .patient .beschrijving {
     width: 100%;
-    height: 60px;
 }
 
 .patient-2-together {
