@@ -6,19 +6,21 @@ var remember = document.getElementById('remember');
 
 if (localStorage.getItem('email') == '' || localStorage.getItem('email') == null) {
     localStorage.setItem('email', '');
+} else {
+    email.value = localStorage.getItem('email');
 }
 
 if (localStorage.getItem('password') == '' || localStorage.getItem('password') == null) {
     localStorage.setItem('password', '');
+} else {
+    password.value = localStorage.getItem('password');
 }
 
 if (localStorage.getItem('remember') == '' || localStorage.getItem('remember') == null) {
     localStorage.setItem('remember', false);
+} else {
+    remember.checked = localStorage.getItem('remember');
 }
-
-email.value = localStorage.getItem('email');
-password.value = localStorage.getItem('password');
-remember.checked = localStorage.getItem('remember');
 
 function login() {
     var errorDiv = document.querySelector('.error--list');
@@ -59,10 +61,19 @@ function login() {
 
     if (email.value == correctEmail && password.value == correctPassword) {
         errorDiv.style.left = '80px';
-    } else if (email.value != correctEmail && password.value != correctPassword && error == false) {
+    } else if (email.value != correctEmail) {
         console.log('Verkeerde codes');
-        errorDiv.style.left = '40px';
-        errorDiv.append('E-mail of wachtwoord is niet correct');
+        errorDiv.style.left = '80px';
+    
+        errorDiv.append('E-mail is niet correct');
+        errorDiv.appendChild(linebreak);
+        error = true;
+    }
+
+    if (password.value != correctPassword) {
+        errorDiv.style.left = '80px';
+
+        errorDiv.append('Wachtwoord is niet correct');
         error = true;
     }
 
@@ -76,9 +87,10 @@ function login() {
         localStorage.setItem('password', '');
     }
 
-    if (!error) {
+    if (error == false) {
         location.href = 'kies-patient.html';
     }
+    
     event.preventDefault();
     return false;
 }

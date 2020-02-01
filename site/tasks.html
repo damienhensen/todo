@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Do It</title>
+
+    <link rel="shortcut icon" href="images/icon.svg">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/modal.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="top">
+            <label for="menu" onclick="check()"><img src="images/hamburger.svg" alt="menu" class="menu--hamburger">
+                <input type="checkbox" id="menu" autocomplete="off"></label>
+
+            <span class="time">TIME</span>
+        </div>
+
+        <div class="menu-items">
+            <a href="index.html">Log uit</a>
+        </div>
+    </div>
+
+    <div class="dates">
+        <div class="day date pickedDate"><span>Dag</span></div>
+        <div class="week date"><span>Week</span></div>
+        <div class="month date"><span>Maand</span></div>
+    </div>
+
+    <div class="main__tasks">
+        <input onclick="nognietgedaan()" type="checkbox" id="nognietgedaan" autocomplete="off"> <label onclick="nognietgedaan()" for="nognietgedaan">Nog niet gedaan</label>
+
+        <div class="day__tasks">
+            <div class="task task__completed">
+                <div class="task__content">
+                    <p class="task__time">07:30</p>
+                    <p class="task__name">Wassen</p>
+                    <img src="images/completed.svg" alt="completed">
+                </div>
+            </div>
+
+            <div class="task task__completed">
+                <div class="task__content">
+                    <p class="task__time">08:00</p>
+                    <p class="task__name">Ontbijt</p>
+                    <img src="images/completed.svg" alt="completed">
+                </div>
+            </div>
+
+            <div class="task enigsteWerkende" style="cursor: pointer;">
+                <div class="task__content">
+                    <p class="task__time">12:00</p>
+                    <p class="task__name">Lunch</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="week__tasks hidden">
+            <div class="task task__completed">
+                <div class="task__content">
+                    <p class="task__time">07:30</p>
+                    <p class="task__name">Wassen</p>
+                    <img src="images/completed.svg" alt="completed">
+                </div>
+                <p class="extra--task__content">Maandag</p>
+            </div>
+
+            <div class="task task__completed">
+                <div class="task__content">
+                    <p class="task__time">08:00</p>
+                    <p class="task__name">Ontbijt</p>
+                    <img src="images/completed.svg" alt="completed">
+                </div>
+                <p class="extra--task__content">Maandag</p>
+            </div>
+
+            <div class="task task__completed">
+                <div class="task__content">
+                    <p class="task__time">12:00</p>
+                    <p class="task__name">Lunch</p>
+                    <img src="images/completed.svg" alt="completed">
+                </div>
+                <p class="extra--task__content">Maandag</p>
+            </div>
+
+            <div class="task task__completed">
+                <div class="task__content">
+                    <p class="task__time">07:30</p>
+                    <p class="task__name">Wassen</p>
+                    <img src="images/completed.svg" alt="completed">
+                </div>
+                <p class="extra--task__content">Dinsdag</p>
+            </div>
+
+            <div class="task task__completed">
+                <div class="task__content">
+                    <p class="task__time">08:00</p>
+                    <p class="task__name">Ontbijt</p>
+                    <img src="images/completed.svg" alt="completed">
+                </div>
+                <p class="extra--task__content">Dinsdag</p>
+            </div>
+
+            <div class="task task__completed">
+                <div class="task__content">
+                    <p class="task__time">12:00</p>
+                    <p class="task__name">Lunch</p>
+                    <img src="images/completed.svg" alt="completed">
+                </div>
+                <p class="extra--task__content">Dinsdag</p>
+            </div>
+
+            <div class="task task__completed">
+                <div class="task__content">
+                    <p class="task__time">07:30</p>
+                    <p class="task__name">Wassen</p>
+                    <img src="images/completed.svg" alt="completed">
+                </div>
+                <p class="extra--task__content">Woensdag</p>
+            </div>
+
+            <div class="task task__completed">
+                <div class="task__content">
+                    <p class="task__time">08:00</p>
+                    <p class="task__name">Ontbijt</p>
+                    <img src="images/completed.svg" alt="completed">
+                </div>
+                <p class="extra--task__content">Woensdag</p>
+            </div>
+
+            <div class="task">
+                <div class="task__content">
+                    <p class="task__time">12:00</p>
+                    <p class="task__name">Lunch</p>
+                </div>
+                <p class="extra--task__content">Woensdag</p>
+            </div>
+
+            <div class="task">
+                <div class="task__content">
+                    <p class="task__time">07:30</p>
+                    <p class="task__name">Wassen</p>
+                </div>
+                <p class="extra--task__content">Donderdag</p>
+            </div>
+
+            <div class="task">
+                <div class="task__content">
+                    <p class="task__time">08:00</p>
+                    <p class="task__name">Ontbijt</p>
+                </div>
+                <p class="extra--task__content">Donderdag</p>
+            </div>
+
+            <div class="task">
+                <div class="task__content">
+                    <p class="task__time">12:00</p>
+                    <p class="task__name">Lunch</p>
+                </div>
+                <p class="extra--task__content">Donderdag</p>
+            </div>
+
+            <div class="task">
+                <div class="task__content">
+                    <p class="task__time">07:30</p>
+                    <p class="task__name">Wassen</p>
+                </div>
+                <p class="extra--task__content">Vrijdag</p>
+            </div>
+
+            <div class="task">
+                <div class="task__content">
+                    <p class="task__time">08:00</p>
+                    <p class="task__name">Ontbijt</p>
+                </div>
+                <p class="extra--task__content">Vrijdag</p>
+            </div>
+
+            <div class="task">
+                <div class="task__content">
+                    <p class="task__time">12:00</p>
+                    <p class="task__name">Lunch</p>
+                </div>
+                <p class="extra--task__content">Vrijdag</p>
+            </div>
+
+            <div class="task">
+                <div class="task__content">
+                    <p class="task__time">07:30</p>
+                    <p class="task__name">Wassen</p>
+                </div>
+                <p class="extra--task__content">Zaterdag</p>
+            </div>
+
+            <div class="task">
+                <div class="task__content">
+                    <p class="task__time">08:00</p>
+                    <p class="task__name">Ontbijt</p>
+                </div>
+                <p class="extra--task__content">Zaterdag</p>
+            </div>
+
+            <div class="task">
+                <div class="task__content">
+                    <p class="task__time">12:00</p>
+                    <p class="task__name">Lunch</p>
+                </div>
+                <p class="extra--task__content">Zaterdag</p>
+            </div>
+
+            <div class="task">
+                <div class="task__content">
+                    <p class="task__time">07:30</p>
+                    <p class="task__name">Wassen</p>
+                </div>
+                <p class="extra--task__content">Zondag</p>
+            </div>
+
+            <div class="task">
+                <div class="task__content">
+                    <p class="task__time">08:00</p>
+                    <p class="task__name">Ontbijt</p>
+                </div>
+                <p class="extra--task__content">Zondag</p>
+            </div>
+
+            <div class="task">
+                <div class="task__content">
+                    <p class="task__time">12:00</p>
+                    <p class="task__name">Lunch</p>
+                </div>
+                <p class="extra--task__content">Zondag</p>
+            </div>
+        </div>
+
+        <div class="month__tasks hidden">
+            <div class="task task__completed">
+                <div class="task__content">
+                    <p class="task__time">07:30</p>
+                    <p class="task__name">Wassen</p>
+                    <img src="images/completed.svg" alt="completed">
+                </div>
+                <p class="extra--task__content">01-02-2020</p>
+            </div>
+
+            <div class="task task__completed">
+                <div class="task__content">
+                    <p class="task__time">07:30</p>
+                    <p class="task__name">Wassen</p>
+                    <img src="images/completed.svg" alt="completed">
+                </div>
+                <p class="extra--task__content">02-02-2020</p>
+            </div>
+
+            <div class="task">
+                <div class="task__content">
+                    <p class="task__time">07:30</p>
+                    <p class="task__name">Wassen</p>
+                </div>
+                <p class="extra--task__content">03-02-2020</p>
+            </div>
+
+            <div class="task">
+                <div class="task__content">
+                    <p class="task__time">07:30</p>
+                    <p class="task__name">Wassen</p>
+                </div>
+                <p class="extra--task__content">04-02-2020</p>
+            </div>
+
+            <div class="task">
+                <div class="task__content">
+                    <p class="task__time">07:30</p>
+                    <p class="task__name">Wassen</p>
+                </div>
+                <p class="extra--task__content">05-02-2020</p>
+            </div>
+
+            <div class="task">
+                <div class="task__content">
+                    <p class="task__time">07:30</p>
+                    <p class="task__name">Wassen</p>
+                </div>
+                <p class="extra--task__content">06-02-2020</p>
+            </div>
+
+            <div class="task">
+                <div class="task__content">
+                    <p class="task__time">07:30</p>
+                    <p class="task__name">Wassen</p>
+                </div>
+                <p class="extra--task__content">07-02-2020</p>
+            </div>
+
+            <div class="task">
+                <div class="task__content">
+                    <p class="task__time">07:30</p>
+                    <p class="task__name">Wassen</p>
+                </div>
+                <p class="extra--task__content">08-02-2020</p>
+            </div>
+
+            <div class="task">
+                <div class="task__content">
+                    <p class="task__time">07:30</p>
+                    <p class="task__name">Wassen</p>
+                </div>
+                <p class="extra--task__content">09-02-2020</p>
+            </div>
+
+            <div class="task">
+                <div class="task__content">
+                    <p class="task__time">07:30</p>
+                    <p class="task__name">Wassen</p>
+                </div>
+                <p class="extra--task__content">10-02-2020</p>
+            </div>
+
+            <div class="task">
+                <div class="task__content">
+                    <p class="task__time">07:30</p>
+                    <p class="task__name">Wassen</p>
+                </div>
+                <p class="extra--task__content">11-02-2020</p>
+            </div>
+
+            <div class="task">
+                <div class="task__content">
+                    <p class="task__time">07:30</p>
+                    <p class="task__name">Wassen</p>
+                </div>
+                <p class="extra--task__content">12-02-2020</p>
+            </div>
+
+            <div class="task">
+                <div class="task__content">
+                    <p class="task__time">07:30</p>
+                    <p class="task__name">Wassen</p>
+                </div>
+                <p class="extra--task__content">13-02-2020</p>
+            </div>
+
+            <div class="task">
+                <div class="task__content">
+                    <p class="task__time">07:30</p>
+                    <p class="task__name">Wassen</p>
+                </div>
+                <p class="extra--task__content">14-02-2020</p>
+            </div>
+
+            <div class="task">
+                <div class="task__content">
+                    <p class="task__time">07:30</p>
+                    <p class="task__name">Wassen</p>
+                </div>
+                <p class="extra--task__content">15-02-2020</p>
+            </div>
+
+            <div class="task">
+                <div class="task__content">
+                    <p class="task__time">07:30</p>
+                    <p class="task__name">Wassen</p>
+                </div>
+                <p class="extra--task__content">16-02-2020</p>
+            </div>
+
+            <div class="task">
+                <div class="task__content">
+                    <p class="task__time">07:30</p>
+                    <p class="task__name">Wassen</p>
+                </div>
+                <p class="extra--task__content">17-02-2020</p>
+            </div>
+
+            <div class="task">
+                <div class="task__content">
+                    <p class="task__time">07:30</p>
+                    <p class="task__name">Wassen</p>
+                </div>
+                <p class="extra--task__content">18-02-2020</p>
+            </div>
+
+            <div class="task">
+                <div class="task__content">
+                    <p class="task__time">07:30</p>
+                    <p class="task__name">Wassen</p>
+                </div>
+                <p class="extra--task__content">19-02-2020</p>
+            </div>
+
+            <div class="task">
+                <div class="task__content">
+                    <p class="task__time">07:30</p>
+                    <p class="task__name">Wassen</p>
+                </div>
+                <p class="extra--task__content">20-02-2020</p>
+            </div>
+
+            <div class="task">
+                <div class="task__content">
+                    <p class="task__time">07:30</p>
+                    <p class="task__name">Wassen</p>
+                </div>
+                <p class="extra--task__content">21-02-2020</p>
+            </div>
+
+            <div class="task">
+                <div class="task__content">
+                    <p class="task__time">07:30</p>
+                    <p class="task__name">Wassen</p>
+                </div>
+                <p class="extra--task__content">22-02-2020</p>
+            </div>
+
+            <div class="task">
+                <div class="task__content">
+                    <p class="task__time">07:30</p>
+                    <p class="task__name">Wassen</p>
+                </div>
+                <p class="extra--task__content">23-02-2020</p>
+            </div>
+
+            <div class="task">
+                <div class="task__content">
+                    <p class="task__time">07:30</p>
+                    <p class="task__name">Wassen</p>
+                </div>
+                <p class="extra--task__content">24-02-2020</p>
+            </div>
+
+            <div class="task">
+                <div class="task__content">
+                    <p class="task__time">07:30</p>
+                    <p class="task__name">Wassen</p>
+                </div>
+                <p class="extra--task__content">25-02-2020</p>
+            </div>
+
+            <div class="task">
+                <div class="task__content">
+                    <p class="task__time">07:30</p>
+                    <p class="task__name">Wassen</p>
+                </div>
+                <p class="extra--task__content">26-02-2020</p>
+            </div>
+
+            <div class="task">
+                <div class="task__content">
+                    <p class="task__time">07:30</p>
+                    <p class="task__name">Wassen</p>
+                </div>
+                <p class="extra--task__content">27-02-2020</p>
+            </div>
+
+            <div class="task">
+                <div class="task__content">
+                    <p class="task__time">07:30</p>
+                    <p class="task__name">Wassen</p>
+                </div>
+                <p class="extra--task__content">28-02-2020</p>
+            </div>
+
+            <div class="task">
+                <div class="task__content">
+                    <p class="task__time">07:30</p>
+                    <p class="task__name">Wassen</p>
+                </div>
+                <p class="extra--task__content">29-02-2020</p>
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="script/menu.js"></script>
+    <script src="script/time.js"></script>
+</body>
+
+</html>

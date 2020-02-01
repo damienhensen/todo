@@ -177,6 +177,11 @@ h1 {
     z-index: 100;
 }
 
+.top {
+    display: flex;
+    justify-content: space-between;
+}
+
 #menu {
     display: none;
 }
@@ -190,6 +195,7 @@ h1 {
 .menu-items {
     position: relative;
     left: 12px;
+    display: none;
 }
 
 .menu-items a {
@@ -199,6 +205,41 @@ h1 {
     font: Segoe UI Bold;
     color: #FFFFFF;
     text-decoration: none;
+}
+
+.time {
+    height: 25px;
+    margin: 36px 11px;
+    font-weight: bold;
+    font-size: 21px;
+}
+
+.dates {
+    position: absolute;
+    top: 99px;
+    right: 0;
+    width: 100vw;
+    height: 60px;
+    background-color: #05CB95;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    text-align: center;
+}
+
+.pickedDate {
+    background-color: #057456;
+    border: 1px solid white;
+    vertical-align: center;
+}
+
+.date {
+    cursor: pointer;
+}
+
+.date span {
+    position: relative;
+    top: 30%;
+    transform: translateY(-30%);
 }
 
 .patient {
@@ -244,4 +285,168 @@ h1 {
     background: #05386B;
     border: 1px solid #707070;
     border-radius: 23px;
+}
+
+.main__tasks {
+    position: absolute;
+    top: 180px;
+}
+
+.task {
+    margin: 29px auto;
+    width: 302px;
+    height: 100px;
+    background-color: #2F695E;
+    border: 1px solid #05CB95;
+    display: grid;
+    margin-bottom: 30px;
+}
+
+.task__completed {
+    background-color: #379683;
+}
+
+.task__content {
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+.task__time {
+    position: absolute;
+    left: 20px;
+    font-weight: bold;
+    font-size: 30px;
+} 
+
+.task__name {
+    position: absolute;
+    left: 125px;
+    margin: 1.9em 0;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.task__content img {
+    position: absolute;
+    left: 240px;
+    margin: 2.4em 0;
+    width: 34px;
+    height: 27px;
+}
+
+.extra--task__content {
+    font-weight: bold;
+    font-size: 16px;
+    margin: 4.7em .3em;
+}
+
+.hidden {
+    display: none;
+}
+
+.task__header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 90%;
+    margin: 2em auto;
+}
+
+.back {
+    width: 26px;
+    height: 23px;
+    cursor: pointer;
+}
+
+.task__title {
+    margin: -.4em -.7em;
+    font-weight: bold;
+    font-size: 38px;
+}
+
+.panic button {
+    margin: -1em .5em;
+    background: transparent;
+    border: 1px solid #FF0000;
+    color: #FF0000;
+    width: 78px;
+    height: 36px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.timer {
+    width: 90%;
+    margin: 0 auto;
+    border: 1px solid #707070;
+    background: white;
+    height: 30px;
+}
+
+.main__task {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.main__task img {
+    height: 180px;
+    margin: 2em 1.5em;
+}
+
+.main__task p {
+    height: 104px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.bottom__task {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.audio img {
+    width: 94px;
+    height: 41px;
+    border: 1px solid black;
+    border-radius: 15px;
+}
+
+.audio {
+    cursor: pointer;
+}
+
+.previous__step,
+.next__step {
+    width: 94px;
+    height: 109px;
+    background: #05386B;
+    border: #707070 solid 1px;
+    text-align: center;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.previous__step span,
+.next__step span {
+    position: relative;
+    top: 40%;
+    font-weight: bold;
+}
+
+.previous__step span {
+    font-size: 22px;
+}
+
+.next__step span {
+    font-size: 18px;
+}
+
+.middletwo {
+    margin: 0 1em; 
+    display: grid;
+    text-align: center;
+}
+
+.step__count {
+    font-size: 25px;
+    font-weight: bold;
 }

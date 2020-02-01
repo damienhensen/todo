@@ -11,7 +11,28 @@ function check() {
 
         $('html').css({
             overflow: 'hidden'
-        })
+        });
+
+        $('.menu-items').css({
+            display: 'block'
+        });
+
+        $('.time').css({
+            display: 'none'
+        });
+
+        $('.dates').css({
+            display: 'none'
+        });
+
+        $('.menu--hamburger').attr("src", 'images/cross.svg');
+       
+        var msg = new SpeechSynthesisUtterance();
+
+        speechSynthesis.speak("bruh");
+
+
+
     } else {
         $('.menu-items a').animate({
             // display: 'none',
@@ -25,5 +46,20 @@ function check() {
         $('html').css({
             overflow: 'auto'
         })
+
+        $('.menu-items').css({
+            display: 'none'
+        });
+
+        $('.time').css({
+            display: 'initial'
+        });
+
+        $('.dates').css({
+            display: 'grid'
+        });
+
+        $('.menu--hamburger').attr("src", 'images/hamburger.svg');
+        
     }
 }

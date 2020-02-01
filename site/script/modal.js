@@ -1,3 +1,4 @@
+let kies = document.querySelectorAll('.kies');
 let terug = document.querySelectorAll('.terug');
 
 const modal = {
@@ -49,7 +50,9 @@ for (let i = 0; i < terug.length; i++) {
     terug[i].addEventListener('click', () => modal.close());
 }
 
-
+for (let i = 0; i < kies.length; i++) {
+    kies[i].addEventListener('click', () => window.location.replace('tasks.html'));
+}
 
 for (let i = 0; i < modal.buttons.length; i++) {
     modal.buttons[i].addEventListener('click', () => {
