@@ -450,3 +450,54 @@ h1 {
     font-size: 25px;
     font-weight: bold;
 }
+
+.modalalert {
+    width: 198px;
+    height: 200px;
+    margin: .6em auto;
+}
+
+.verzorger {
+    max-width: 90%;
+    margin: .4em auto;
+    text-align: left !important;
+    font-size: 24px !important;
+    font-weight: bold !important;
+}
+
+.verkeerdGedrukt {
+    font-size: 19px !important;
+    width: 179px !important;
+    height: 46px !important;
+    border-radius: 23px !important;
+    background-color: #05386B;
+    border: 1px solid #707070;
+    color: white;
+}
+
+.rondAf {
+    font-size: 19px !important;
+    width: 179px !important;
+    height: 46px !important;
+    border-radius: 23px !important;
+    background-color: #05386B;
+    border: 1px solid #707070;
+    color: white;
+    cursor: pointer;
+}
+
+.GG {
+    max-width: 90%;
+    margin: .4em auto;
+    font-size: 30px !important;
+    font-weight: bold !important;
+}
+
+.specialModal2 {
+    background: #379683;
+    border: 1px solid #05CB95;
+    position: absolute;
+    top: 68px;
+    width: 300px;
+    height: 400px;
+}

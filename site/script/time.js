@@ -84,8 +84,6 @@ $('.week').click(function() {
     $('.month__tasks').addClass('hidden');
 });
     
-
-
 $('.month').click(function() {
     $('.day').removeClass('pickedDate');
     $('.week').removeClass('pickedDate');
@@ -99,3 +97,15 @@ $('.month').click(function() {
 $('.enigsteWerkende').click(function() {
     window.location.replace('task.html')
 });
+
+if (localStorage.getItem('completed') == true || localStorage.getItem('completed') == 'true') {
+    console.log("yes");
+    
+    $('.enigsteWerkende').addClass('hidden');
+    $('.werkendeComplete').removeClass('hidden');
+} else {
+    console.log("no");
+    
+    $('.enigsteWerkende').removeClass('hidden');
+    $('.werkendeComplete').addClass('hidden');
+}

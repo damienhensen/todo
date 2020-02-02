@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Do It</title>
+
+    <link rel="shortcut icon" href="images/icon.svg">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/modal.css">
+</head>
+
+<body>
+    <div class="task__header">
+        <div class="back">
+            <img src="images/back.svg" alt="back">
+        </div>
+        <div class="task__title">Lunch</div>
+        <div class="panic"><button class="modalButton">Panic!</button>
+            <div class="modalContent specialModal">
+                <img class="modalalert" src="images/alert.png" alt="ALERT">
+                <h3 class="verzorger">Een verzoger komt om te helpen.</h3>
+                <button class="terug verkeerdGedrukt">Verkeerd gedrukt?</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="timer"></div>
+
+    <div class="main__task">
+        <img src="images/step1.png" alt="image">
+        <p>Zet je bord en bestek neer op de tafel</p>
+    </div>
+
+    <div class="bottom__task">
+        <div class="previous__step"><span>Terug</span></div>
+        <div class="middletwo">
+            <div class="audio">
+                <img src="images/volume.svg" alt="">
+            </div>
+            <div class="step__count">1 / 5</div>
+        </div>
+        <div class="next__step real-next__step"><span>Volgende</span> </div>
+
+        <div>
+            <div class="next__step modalButton hidden fake-next__step"><span>Volgende</span>
+                <div class="modalContent specialModal2">
+                    <img class="modalalert" src="images/done.png" alt="ALERT">
+                    <h3 class="GG">Goed Gedaan!</h3>
+                    <button class="rondAf">Terug naar taken</button>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="script/task.js"></script>
+    <script src="script/modal.js"></script>
+</body>
+
+</html>
